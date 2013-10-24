@@ -1,0 +1,6 @@
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/scripts
+export PATH=/usr/local/bin:$PATH
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/bin:$PATH
+export PATH=~/tools/apache-ant-1.9.2/bin:$PATH
+export PATH=~/tools/apache-maven-3.1.1/bin:$PATH

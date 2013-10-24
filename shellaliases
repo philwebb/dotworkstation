@@ -1,0 +1,76 @@
+#########################################
+# Aliases
+
+#!/bin/sh
+
+alias zipall='for D in *; do zip -r "$D" "$D"; done'
+alias pram.reset='sudo nvram boot-args=”-p -r”'
+alias brew.update='brew update && brew upgrade'
+alias hexdumpfile='od -h'
+
+# Set the extended MacOS attributes on a file such that Quicklook will open it as text
+alias finder.astext='xattr -wx com.apple.FinderInfo "54 45 58 54 21 52 63 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $1'
+
+# Show network connections
+# Often useful to prefix with SUDO to see more system level network usage
+alias network.connections='lsof -l -i +L -R -V'
+alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
+alias network.internalip="ifconfig en0 | egrep -o '([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)'"
+alias network.externalip='curl -s http://checkip.dyndns.org/ | sed "s/[a-zA-Z<>/ :]//g"'
+
+# Files used, anywhere on the filesystem
+alias files.usage='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep'
+# Files being opened
+alias files.open='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep open'
+# Files in use in the Users directory
+alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep Users'
+
+# Directory listings
+# LS_COLORS='no=01;37:fi=01;37:di=07;96:ln=01;36:pi=01;32:so=01;35:do=01;35:bd=01;33:cd=01;33:ex=01;31:mi=00;05;37:or=00;05;37:'
+# -G Add colors to ls
+# -l Long format
+# -h Short size suffixes (B, K, M, G, P)
+# -p Postpend slash to folders
+alias ls='ls -G -h -p '
+alias ll='ls -l -G -h -p '
+
+# Lets color escape sequences carry through to less and more
+alias lessc='less -R' 
+alias morec='more -R'
+
+
+#########################################
+# Utility Functions
+
+# Use Mac OSX Preview to open a man page in a more handsome format
+function manp() {
+  man -t $1 | open -f -a /Applications/Preview.app
+}
+
+# Show normally hidden system and dotfile types of files
+# in Mac OSX Finder
+function finder.showhiddenfiles() {
+  defaults write com.apple.Finder AppleShowAllFiles YES
+  osascript -e 'tell application "Finder" to quit'
+  sleep 0.25
+  osascript -e 'tell application "Finder" to activate'
+}
+
+# Hide (back to defaults) normally hidden system and dotfile types of files
+# in Mac OSX Finder
+function finder.hidehiddenfiles() {
+  defaults write com.apple.Finder AppleShowAllFiles NO
+  osascript -e 'tell application "Finder" to quit'
+  sleep 0.25
+  osascript -e 'tell application "Finder" to activate'
+}
+
+function screenshot.setjpg() {
+    defaults write com.apple.screencapture type jpg
+    killall SystemUIServer
+}
+
+function screenshot.setpng() {
+    defaults write com.apple.screencapture type png
+	killall SystemUIServer
+}

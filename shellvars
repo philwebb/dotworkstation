@@ -1,0 +1,6 @@
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home
+export ANT_HOME=~/tools/apache-ant-1.9.2
+export M2_HOME=~/tools/apache-maven-3.1.1
+export PAGER="less"
+GPG_TTY=$(tty)
+export GPG_TTY
