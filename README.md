@@ -6,36 +6,45 @@
 Install from the App Store.
 
 ### Homebrew
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-brew doctor
+
+```
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew doctor
+```
 
 ### zsh / oh-my-zsh
-brew install zsh
-https://github.com/robbyrussell/oh-my-zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-chsh -s /bin/zsh
+
+```
+$ brew install zsh
+$ https://github.com/robbyrussell/oh-my-zsh
+$ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+$ chsh -s /bin/zsh
+```
 
 ### dotfiles / settings
+
+```
 ./_setupdotfiles.zsh
 ./_setuposx.sh
+```
 
 ### Key Remapping
 Remap caps-lock to command-alt-control-shift
-http://www.leancrew.com/all-this/2012/11/shift-control-option-command-on-caps-lock/
-https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en
-https://pqrs.org/macosx/keyremap4macbook/index.html.en
+* http://www.leancrew.com/all-this/2012/11/shift-control-option-command-on-caps-lock/
+* https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en
+* https://pqrs.org/macosx/keyremap4macbook/index.html.en
 
 Install [Slate](https://github.com/jigish/slate)
 
 ### Misc
-[Better Touch Tool](http://www.boastr.net/)
-[Java](http://www.oracle.com/technetwork/java/javase/downloads/)
-[Flash](get.adobe.com/flashplayer/)
-[Skype](http://www.skype.com/en/)
-[HipChat](https://www.hipchat.com/downloads#mac)
-[Thunderbird](http://www.mozilla.org/en-US/thunderbird/)
-[Chrome](https://www.google.com/intl/en/chrome/browser/)
-[GitX](http://rowanj.github.io/gitx/)
+* [Better Touch Tool](http://www.boastr.net/)
+* [Java](http://www.oracle.com/technetwork/java/javase/downloads/)
+* [Flash](get.adobe.com/flashplayer/)
+* [Skype](http://www.skype.com/en/)
+* [HipChat](https://www.hipchat.com/downloads#mac)
+* [Thunderbird](http://www.mozilla.org/en-US/thunderbird/)
+* [Chrome](https://www.google.com/intl/en/chrome/browser/)
+* [GitX](http://rowanj.github.io/gitx/)
 
 
 ```
