@@ -1,6 +1,6 @@
 [user]
 	name = Phillip Webb
-	email = pwebb@gopivotal.com
+	email = pwebb@pivotal.io
 
 [color]
 	ui = auto
@@ -24,7 +24,6 @@
 [core]
 	excludesfile = ~/.gitignore
 	quotepath = false
-	autocrlf = input
 	safecrlf = warn
 	editor = subl -w
 

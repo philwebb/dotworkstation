@@ -11,3 +11,4 @@ export EDITOR='subl'
 source ~/.shellvars
 source ~/.shellpaths
 source ~/.shellaliases
+source ~/.rvm/scripts/rvm

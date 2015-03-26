@@ -1,1 +1,1 @@
-git --no-pager diff --name-only HEAD~1 HEAD | grep java | xargs perl -pi -e "s/Copyright\ .*\ the\ original\ author\ or\ authors/Copyright 2002-2013 the original author or authors/"
+git --no-pager diff --name-only HEAD~1 HEAD | grep java | xargs perl -pi -e "s/Copyright\ (\d{4})(-\d{4})?\ the\ original\ author\ or\ authors/Copyright \1-2015 the original author or authors/"
