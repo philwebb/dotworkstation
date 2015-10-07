@@ -329,7 +329,7 @@
     <requirement
         name="io.github.philwebb.eclipse.theme.cupertino.feature.feature.group"/>
     <requirement
-        name="name.njbartlett.eclipse.macbadge.feature.feature.group&#xA;"/>
+        name="name.njbartlett.eclipse.macbadge.feature.feature.group"/>
     <repository
         url="https://dl.bintray.com/philwebb/eclipse-cupertino-theme"/>
     <repository
@@ -362,4 +362,21 @@
       </setupTask>
     </setupTask>
   </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      type="JRE"
+      name="jre.location-1.8"
+      value="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home"
+      label="JRE 1.8 Location">
+    <description>The location of a JDK or JRE compatible with Java 1.8.</description>
+  </setupTask>
+  <attributeRule
+      attributeURI="http://www.eclipse.org/oomph/setup/1.0#//InstallationTask/location"
+      value="${install.root/}${installation.id}"/>
+  <attributeRule
+      attributeURI="http://www.eclipse.org/oomph/setup/1.0#//WorkspaceTask/location"
+      value="${installation.location/ws}"/>
+  <acceptedLicense>DEFAULT_LICENSE Marker to remember license pre-prompting</acceptedLicense>
+  <acceptedLicense>6a3d083ad2bd7d3a80ee293235f8c5b1 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>abc76a6cc9d06e4684ff61ed74a972c Eclipse Foundation Software User Agreement</acceptedLicense>
 </setup:User>
