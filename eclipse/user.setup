@@ -5,7 +5,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
-    name="pwebb"
     unsignedPolicy="ACCEPT"
     questionnaireDate="2015-10-07T11:15:42.934-0700">
   <setupTask
@@ -315,17 +314,7 @@
           value="false"/>
     </setupTask>
   </setupTask>
-  <setupTask
-      xsi:type="setup:VariableTask"
-      type="FOLDER"
-      name="install.root"
-      value="/Users/pwebb/tools/eclipse"
-      defaultValue="/Users/pwebb"
-      label="Root install folder">
-    <description>The root install folder where all the products are installed</description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup.p2:P2Task">
+  <setupTask xsi:type="setup.p2:P2Task">
     <requirement
         name="io.github.philwebb.eclipse.theme.cupertino.feature.feature.group"/>
     <requirement
@@ -335,48 +324,4 @@
     <repository
         url="http://macbadge-updates.s3.amazonaws.com/"/>
   </setupTask>
-  <setupTask
-      xsi:type="setup:CompoundTask"
-      name="Github Projects">
-    <restriction
-        xsi:type="setup:ProjectCatalog"
-        href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']"/>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="&lt;User>">
-      <restriction
-          xsi:type="setup:Project"
-          href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']/@projects[name='user.project']"/>
-      <setupTask
-          xsi:type="setup:CompoundTask"
-          name="Spring Boot">
-        <restriction
-            xsi:type="setup:Project"
-            href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']/@projects[name='user.project']/@projects[name='spring.boot']"/>
-        <setupTask
-            xsi:type="setup:VariableTask"
-            type="FOLDER"
-            name="checkout.location"
-            value="/Users/pwebb/projects/spring-boot/code"
-            label="Checkout Location"/>
-      </setupTask>
-    </setupTask>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:VariableTask"
-      type="JRE"
-      name="jre.location-1.8"
-      value="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home"
-      label="JRE 1.8 Location">
-    <description>The location of a JDK or JRE compatible with Java 1.8.</description>
-  </setupTask>
-  <attributeRule
-      attributeURI="http://www.eclipse.org/oomph/setup/1.0#//InstallationTask/location"
-      value="${install.root/}${installation.id}"/>
-  <attributeRule
-      attributeURI="http://www.eclipse.org/oomph/setup/1.0#//WorkspaceTask/location"
-      value="${installation.location/ws}"/>
-  <acceptedLicense>DEFAULT_LICENSE Marker to remember license pre-prompting</acceptedLicense>
-  <acceptedLicense>6a3d083ad2bd7d3a80ee293235f8c5b1 Eclipse Foundation Software User Agreement</acceptedLicense>
-  <acceptedLicense>abc76a6cc9d06e4684ff61ed74a972c Eclipse Foundation Software User Agreement</acceptedLicense>
 </setup:User>
