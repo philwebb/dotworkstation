@@ -9,7 +9,7 @@ source $ZSH/oh-my-zsh.sh
 alias git='noglob git'
 setopt no_beep
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 export NVM_DIR="/Users/pwebb/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
