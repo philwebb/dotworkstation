@@ -12,3 +12,4 @@ source ~/.shellvars
 source ~/.shellpaths
 source ~/.shellaliases
 source ~/.rvm/scripts/rvm
+source $(brew --prefix nvm)/nvm.sh

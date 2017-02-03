@@ -314,14 +314,4 @@
           value="false"/>
     </setupTask>
   </setupTask>
-  <setupTask xsi:type="setup.p2:P2Task">
-    <requirement
-        name="io.github.philwebb.eclipse.theme.cupertino.feature.feature.group"/>
-    <requirement
-        name="name.njbartlett.eclipse.macbadge.feature.feature.group"/>
-    <repository
-        url="https://dl.bintray.com/philwebb/eclipse-cupertino-theme"/>
-    <repository
-        url="http://macbadge-updates.s3.amazonaws.com/"/>
-  </setupTask>
 </setup:User>
