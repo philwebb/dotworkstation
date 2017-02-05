@@ -1,4 +1,4 @@
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 export ANT_HOME=~/tools/apache-ant-1.9.6
 export M2_HOME=~/tools/apache-maven-current
 export PAGER="less"
