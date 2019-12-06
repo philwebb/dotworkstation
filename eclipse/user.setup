@@ -5,8 +5,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    name="Phillip Webb"
     unsignedPolicy="ACCEPT"
-    questionnaireDate="2015-10-07T11:15:42.934-0700">
+    questionnaireDate="2019-12-06T09:16:34.350-0800">
+  <setupTask
+      xsi:type="setup.p2:P2Task">
+    <requirement
+        name="AnyEditTools.feature.group"/>
+    <repository
+        url="http://andrei.gmxhome.de/eclipse/"/>
+  </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
       name="User Preferences">
@@ -148,6 +156,26 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/smartPaste"
           value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.lsp4e">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.lsp4e//org.eclipse.languageserver.languages.springboot/org.eclipse.jdt.core.javaSource"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.lsp4e//org.eclipse.languageserver.languages.springboot/org.springframework.boot.ide.properties.application.properties"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.lsp4e//org.eclipse.languageserver.languages.springboot/org.springframework.boot.ide.properties.application.yml"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.lsp4e//org.eclipse.languageserver.languages.springboot/org.springframework.boot.ide.xmlconfig"
+          value="false"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
