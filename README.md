@@ -1,6 +1,26 @@
-# Helpful macOS setup
+## Phil's MacBook setup
+
+Provides a quick way to get a fresh MacBook setup the way I like it.
+
 
 ## Installations
+
+
+### Firefox
+
+```
+cd ~/Downloads
+curl -L "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en-US" > firefox.dmg
+open ./firefox.dmg
+```
+
+### 1Password
+
+Install DropBox first from https://dropbox.com/downloading then download 1Password from https://1password.com/downloads/mac (don't use use the app store version)
+
+
+
+
 
 ### xcode
 Install from the App Store.
