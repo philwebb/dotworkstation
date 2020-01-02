@@ -5,7 +5,6 @@ Provides a quick way to get a fresh MacBook setup the way I like it.
 
 ## Installations
 
-
 ### Firefox
 
 ```
@@ -14,6 +13,8 @@ curl -L "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en
 open ./firefox.dmg
 ```
 
+
+
 ### 1Password
 
 Install DropBox first from https://dropbox.com/downloading then download 1Password from https://1password.com/downloads/mac (don't use use the app store version)
@@ -21,36 +22,61 @@ Install DropBox first from https://dropbox.com/downloading then download 1Passwo
 
 
 
+### Xcode
 
-### xcode
 Install from the App Store.
+
+
 
 ### Homebrew
 
 https://brew.sh/
 
 ```
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew doctor
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
 ```
+
+Install:
+
+```
+brew install coreutils curl tree watch wget tmux grep git
+brew install imagemagick dive ruby asciidoctor
+```
+
+
+
+### .workstation
+
+```
+cd ~
+git clone https://github.com/philwebb/dotworkstation .workstation
+```
+
+
 
 ### zsh / oh-my-zsh
 
 https://github.com/robbyrussell/oh-my-zsh
 
 ```
-$ brew install zsh
-$ https://github.com/robbyrussell/oh-my-zsh
-$ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-$ chsh -s /bin/zsh
+brew install zsh
+https://github.com/robbyrussell/oh-my-zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+chsh -s /bin/zsh
 ```
+
+
 
 ### dotfiles / settings
 
 ```
+cd ~/.workstation
 ./_setupdotfiles.zsh
 ./_setuposx.sh
 ```
+
+
 
 ### Key Remapping
 Remap caps-lock to command-alt-control-shift
@@ -69,11 +95,7 @@ Import `better-touch-tool-default.json` into better touch tool to handle the key
 * [GitX](http://rowanj.github.io/gitx/)
 
 
-```
-brew install git
-brew install tmux
-brew install tree
-```
+
 
 ### Firefox
 http://www.mozilla.org/en-US/firefox/new/
