@@ -1,0 +1,169 @@
+{
+  "BTTPresetName" : "Default",
+  "BTTPresetUUID" : "4AC8712C-5D2F-466D-B0B1-F995AF4C8CBB",
+  "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "BT.G",
+      "BTTAppName" : "Global",
+      "BTTAppSpecificSettings" : {
+
+      },
+      "BTTTriggers" : [
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 20,
+          "BTTPredefinedActionName" : "Maximize Window Right",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 5,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 2,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 21,
+          "BTTPredefinedActionName" : "Maximize Window",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 3,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 0,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 91,
+          "BTTPredefinedActionName" : "Resize Window to Bottom Left Quarter \/ Corner",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 8,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 7,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 19,
+          "BTTPredefinedActionName" : "Maximize Window Left",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 2,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 1,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 92,
+          "BTTPredefinedActionName" : "Resize Window to Top Right Quarter \/ Corner",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 17,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 6,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 93,
+          "BTTPredefinedActionName" : "Resize Window to Bottom Right Quarter \/ Corner",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 11,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 8,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 95,
+          "BTTPredefinedActionName" : "Maximize Window to Bottom Half",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 9,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 4,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 47,
+          "BTTPredefinedActionName" : "Move Window to Next Monitor",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 1,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 9,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 90,
+          "BTTPredefinedActionName" : "Resize Window to Top Left Quarter \/ Corner",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 14,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 5,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 615,
+          "BTTTriggerTypeDescription" : "Leftclick Green Window Button",
+          "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+          "BTTPredefinedActionType" : 21,
+          "BTTPredefinedActionName" : "Maximize Window",
+          "BTTEnabled" : 1,
+          "BTTOrder" : 0,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 96,
+          "BTTPredefinedActionName" : "Maximize Window to Top Half",
+          "BTTAdditionalConfiguration" : "1966080",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 15,
+          "BTTShortcutModifierKeys" : 1966080,
+          "BTTOrder" : 3,
+          "BTTIconData" : "",
+          "BTTAlternateIconData" : ""
+        }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTAppSpecificSettings" : {
+
+      },
+      "BTTTriggers" : [
+
+      ]
+    }
+  ],
+  "BTTPresetSnapAreas" : [
+
+  ]
+}

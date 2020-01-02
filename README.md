@@ -1,4 +1,4 @@
-# What is this
+# Helpful macOS setup
 
 ## Installations
 
@@ -7,12 +7,16 @@ Install from the App Store.
 
 ### Homebrew
 
+https://brew.sh/
+
 ```
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew doctor
 ```
 
 ### zsh / oh-my-zsh
+
+https://github.com/robbyrussell/oh-my-zsh
 
 ```
 $ brew install zsh
@@ -30,14 +34,14 @@ $ chsh -s /bin/zsh
 
 ### Key Remapping
 Remap caps-lock to command-alt-control-shift
-* http://www.leancrew.com/all-this/2012/11/shift-control-option-command-on-caps-lock/
-* https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en
-* https://pqrs.org/macosx/keyremap4macbook/index.html.en
+* [Karabiner] https://pqrs.org/osx/karabiner/
+* [Better Touch Tool](http://www.boastr.net/)
 
-Install [Slate](https://github.com/jigish/slate)
+Install Karabiner and under "complex modifications" add `caps_lock to command+control+option+shift`. 
+Import `better-touch-tool-default.json` into better touch tool to handle the keys.
+
 
 ### Misc
-* [Better Touch Tool](http://www.boastr.net/)
 * [Java](http://www.oracle.com/technetwork/java/javase/downloads/)
 * [Skype](http://www.skype.com/en/)
 * [Thunderbird](http://www.mozilla.org/en-US/thunderbird/)
@@ -54,15 +58,12 @@ brew install tree
 ### Firefox
 http://www.mozilla.org/en-US/firefox/new/
 Add ~/scripts/firefox-profiles to the dock for demos
-Add extensions
-- Firebug
+Install add-ons
 - JSONView
-- Greasemonkey
-
-### Eclipse/STS
-http://spring.io/tools/sts/all
-
-https://github.com/philwebb/eclipse-theme-sts
+- NoScript
+- Tampermonkey
+- uBlock Origin
+- YouTube Downloader Lite
 
 
 
