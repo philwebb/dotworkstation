@@ -1,3 +1,6 @@
+[core]
+	include = ~/.workstation/gitconfig.secret
+
 [user]
 	name = Phillip Webb
 	email = pwebb@pivotal.io
@@ -22,7 +25,7 @@
 	untracked = cyan
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.workstation/gitignore
 	quotepath = false
 	safecrlf = warn
 	editor = subl -w
@@ -68,6 +71,17 @@
 	logme = log --author=Phillip --stat -C
 	branchdesc = "!sh -c '~/scripts/git-branch-desc' -"
 
+#	mergepr = "!f() { \
+#		[[ -z \"$1\" ]] && { echo \"No branch specified\"; exit 1; }; \
+#		declare ownerrepo=$(git remote -v | grep \"$https://github\\.com\\/spring-[projects|cloud|io].*\\(push\\)\" | cut -f 2 | cut -c 20- | sed 's/\\..*$//'); \
+#		declare pullrequest=$(git log --format=%B -n 1 $1 | grep -E \"See\\ gh-([0-9]+)\" | awk '{$1=$1};1' | cut -c 8-); \
+#		[[ -z \"$pullrequest\" ]] && { echo \"No see reference found\"; exit 1; }; \
+#		declare pullauthor=$(curl -u philwebb:___token___ -s \"https://api.github.com/repos/${ownerrepo}/pulls/${pullrequest}\" | jq -r .user.login); \
+#		git merge -q --no-ff --log -m \"Merge pull request #${pullrequest} from ${pullauthor}\" $1; \
+#		git commit -q --amend -m\"$(git log --format=%B -n1)$(echo \"\\n\\nCloses gh-${pullrequest}\")\"; \
+#		echo \"Merged PR #${pullrequest} in ${ownerrepo} from ${pullauthor}\"; \
+#	}; f"
+
 [apply]
 	whitespace = nowarn
 
@@ -76,3 +90,4 @@
 
 [commit]
 	template = ~/.workstation/gitmessage.txt
+
