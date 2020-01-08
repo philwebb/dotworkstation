@@ -44,17 +44,6 @@ brew install coreutils curl tree watch wget tmux grep git
 brew install imagemagick dive ruby asciidoctor
 ```
 
-
-
-### .workstation
-
-```
-cd ~
-git clone https://github.com/philwebb/dotworkstation .workstation
-```
-
-
-
 ### zsh / oh-my-zsh
 
 https://github.com/robbyrussell/oh-my-zsh
@@ -67,37 +56,36 @@ chsh -s /bin/zsh
 ```
 
 
+### .workstation
 
-### dotfiles / settings
+Clone this repo:
+
+```
+cd ~
+git clone https://github.com/philwebb/dotworkstation .workstation
+```
+
+Grant "full disk access" to "terminal" in the "Security & Privacy" system preferences.
 
 ```
 cd ~/.workstation
+./_setupmacos.sh
 ./_setupdotfiles.zsh
-./_setuposx.sh
 ```
 
 
 
 ### Key Remapping
 Remap caps-lock to command-alt-control-shift
-* [Karabiner] https://pqrs.org/osx/karabiner/
-* [Better Touch Tool](http://www.boastr.net/)
+* [Karabiner] (https://pqrs.org/osx/karabiner/)
+* [Better Touch Tool](http://www.folivora.ai/)
 
 Install Karabiner and under "complex modifications" add `caps_lock to command+control+option+shift`. 
-Import `better-touch-tool-default.json` into better touch tool to handle the keys.
-
-
-### Misc
-* [Java](http://www.oracle.com/technetwork/java/javase/downloads/)
-* [Skype](http://www.skype.com/en/)
-* [Thunderbird](http://www.mozilla.org/en-US/thunderbird/)
-* [Chrome](https://www.google.com/intl/en/chrome/browser/)
-* [GitX](http://rowanj.github.io/gitx/)
+Import `better-touch-tool-default.json` into better touch tool to handle the keys (cmd + shift + `.` to show hidden folders).
 
 
 
-
-### Firefox
+### Additional Firefox
 http://www.mozilla.org/en-US/firefox/new/
 Add ~/scripts/firefox-profiles to the dock for demos
 Install add-ons
@@ -109,14 +97,56 @@ Install add-ons
 
 
 
-### Sublime Text 2
-http://www.sublimetext.com/
+### Java
+Install OpenJDK from https://github.com/AdoptOpenJDK
+Also install SDKMan from https://sdkman.io/
+
+```
+sdk install java 11.0.3.hs-adpt
+sdk install java 13.0.1.hs-adpt
+sdk install java 8.0.232.hs-adpt
+```
+
+
+### App Store
+
+Useful apps from the app store:
+
+* Keynote
+* Slack
+* Tweetdeck
+* Lastpass
+
+
+### Misc
+
+Useful apps to download
+
+* [Chrome](https://www.google.com/intl/en/chrome/browser/)
+* [Thunderbird](http://www.mozilla.org/en-US/thunderbird/)
+* [GitX](http://rowanj.github.io/gitx/)
+* [Skype](http://www.skype.com/en/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Google Drive](https://www.google.com/drive/)
+* [Docker](https://docs.docker.com/docker-for-mac/install)
+* [Atom](https://atom.io/)
+* [VirtualBox](https://www.virtualbox.org/)
+* [Zoom](https://zoom.us/download)
+* [VLC](https://www.videolan.org/vlc/)
+* [IINA](https://iina.io/)
+* [Sublime Text](https://www.sublimetext.com/)
+* [Wireshark](https://www.wireshark.org/)
+* [Disk Inventory X](https://gitlab.com/tderlien/disk-inventory-x)
+
+
+
+## Extra Configuration
+
+### Sublime
+
+```
 ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
-### Secrets Preferences Pane
-http://secrets.blacktree.com/
-
-## Configure
+```
 
 ### Google Account
 Add account to mail.app
