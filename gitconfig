@@ -1,9 +1,9 @@
-[core]
-	include = ~/.workstation/gitconfig.secret
+[include]
+	path = ~/.workstation/gitconfig.secret
 
 [user]
 	name = Phillip Webb
-	email = pwebb@pivotal.io
+	email = pwebb@vmware.com
 
 [color]
 	ui = auto
