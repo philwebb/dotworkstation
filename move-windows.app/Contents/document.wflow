@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>492</string>
+	<key>AMApplicationVersion</key>
+	<string>2.10</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>#!/usr/bin/osascript
+
+-- ryan mott 
+-- forked from bradchoate http://snipplr.com/view/8645/gather-windows/
+
+tell application "Finder"
+    -- get desktop dimensions (dw = desktop width; dh = desktop height)
+    set db to bounds of window of desktop
+
+    -- min width and height can be less than zero when multiple monitors arranged
+    -- such that the primary is not top-left (coordinate origin offset)
+    set {minw, minh} to {item 1 of db, item 2 of db}
+    set {maxw, maxh} to {item 3 of db, item 4 of db}
+
+    set {dw, dh} to {maxw - minw, maxh - minh}
+
+    -- assuming menu bar 22 pixels tall
+    set barheight to 22
+    set topbarclear to minh + barheight
+end tell
+ 
+tell application "System Events"
+    repeat with proc in application processes
+        tell proc
+            repeat with win in windows
+                -- get window dimensions (w = width; h = height)
+                set {w, h} to size of win
+ 
+                -- get window postion (l = left of window; t = top of window)
+                set {l, t} to position of win
+ 
+                -- nh = new window height; nw = new window width
+                set {nh, nw} to {h, w}
+ 
+                -- window width is bigger than desktop size,
+                -- so set new window width to match the desktop
+                if (w &gt; dw) then ¬
+                    set nw to dw
+ 
+                -- window height is bigger than the desktop size (minus menu bar),
+                -- so set new window height to be desktop height minus menu height
+                if (h &gt; dh - barheight) then ¬
+                    set nh to dh - barheight
+ 
+                -- r = right coordinate of window; b = bottom coordinate of window
+                set {r, b} to {l + nw, t + nh}
+ 
+                -- nl = new left coordinate; nt = new top coordinate
+                set {nl, nt} to {l, t}
+ 
+                -- left coordinate is off screen, so set new left coordinate
+                -- to be at the left edge of the desktop
+                if (l &lt; minw) then ¬
+                    set nl to minw
+ 
+                -- top coordinate is above bottom of menu bar,
+                -- so set new top coordinate to clear it
+                if (t &lt; topbarclear) then ¬
+                    set nt to topbarclear
+ 
+                -- right coordinate extends beyond desktop width,
+                -- so set new left coordinate to be desktop width - window width
+                -- plus origin offset
+                if (r &gt; maxw) then ¬
+                    set nl to dw - nw + minw
+ 
+                -- bottom coordinate extends beyond desktop height,
+                -- so set new top coordinate to be desktop height - window height
+                -- plus origin offset
+                if (b &gt; dh) then ¬
+                    set nt to dh - nh + minh
+ 
+                -- if we have calculated a new top or left coordinate, reposition window
+                if (l ≠ nl or t ≠ nt) then ¬
+                    set position of win to {nl, nt}
+ 
+                -- if we have calculated a new height or width, resize window
+                if (h ≠ nh or w ≠ nw) then ¬
+                    set size of win to {nw, nh}
+            end repeat
+        end tell
+    end repeat
+end tell
+</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>4798C9BF-EFFB-4772-B76A-7DDD0532BF85</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>FC217D90-A9B9-4D98-BF9C-C992F5277BAB</string>
+				<key>UUID</key>
+				<string>E06503DD-AE9A-44E1-A5E1-84D130441CF6</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>309.000000:315.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict/>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>
