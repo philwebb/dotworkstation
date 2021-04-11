@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="gozilla"
 export CASE_SENSITIVE="true"
-plugins=(ant brew compleat cp docker dirpersist gcloud gem git gradle grails history kubectl mvn osx redis-cli rsync ruby rvm scala screen ssh-agent sublime tmux)
+plugins=(ant brew compleat cp docker dirpersist gcloud gem git gradle grails history kubectl mvn osx redis-cli rsync ruby rvm scala screen sublime tmux)
 source $ZSH/oh-my-zsh.sh
 
 # zsh specifics

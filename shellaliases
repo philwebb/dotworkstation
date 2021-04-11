@@ -74,3 +74,8 @@ function screenshot.setpng() {
     defaults write com.apple.screencapture type png
 	killall SystemUIServer
 }
+
+
+# VPN client
+alias enablevpn="launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*"
+alias disablevpn="launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*"
