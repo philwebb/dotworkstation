@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 if [ -z "$1" ]; then
     echo "Usage ./_setupmacos.sh <hostname>"
     exit 1

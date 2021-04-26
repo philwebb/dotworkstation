@@ -16,14 +16,12 @@ open ./firefox.dmg
 
 
 ### 1Password
-
 Install DropBox first from https://dropbox.com/downloading then download 1Password from https://1password.com/downloads/mac (don't use use the app store version)
 
 
 
 
 ### Xcode
-
 Install from the App Store.
 
 
@@ -40,9 +38,11 @@ brew doctor
 Install:
 
 ```
-brew install coreutils curl tree watch wget tmux grep git
+brew install coreutils curl tree watch wget tmux grep git jq
 brew install imagemagick dive ruby asciidoctor
 ```
+
+
 
 ### zsh / oh-my-zsh
 
@@ -50,14 +50,13 @@ https://github.com/robbyrussell/oh-my-zsh
 
 ```
 brew install zsh
-https://github.com/robbyrussell/oh-my-zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s /bin/zsh
 ```
 
 
-### .workstation
 
+### .workstation
 Clone this repo:
 
 ```
@@ -77,7 +76,7 @@ cd ~/.workstation
 
 ### Key Remapping
 Remap caps-lock to command-alt-control-shift
-* [Karabiner] (https://pqrs.org/osx/karabiner/)
+* [Karabiner](https://pqrs.org/osx/karabiner/)
 * [Better Touch Tool](http://www.folivora.ai/)
 
 Install Karabiner and under "complex modifications" add `caps_lock to command+control+option+shift`. 
@@ -98,18 +97,14 @@ Install add-ons
 
 
 ### Java
-Install OpenJDK from https://github.com/AdoptOpenJDK
-Also install SDKMan from https://sdkman.io/
+Install SDKMan from https://sdkman.io/
 
 ```
-sdk install java 11.0.3.hs-adpt
-sdk install java 13.0.1.hs-adpt
-sdk install java 8.0.232.hs-adpt
+for v in $(sdk list java | grep -e 'hs-adpt' | grep -v -e '\$' | cut -d "|" -f 6); do sdk install java $v; done
 ```
 
 
 ### App Store
-
 Useful apps from the app store:
 
 * Keynote
@@ -137,6 +132,8 @@ Useful apps to download
 * [Sublime Text](https://www.sublimetext.com/)
 * [Wireshark](https://www.wireshark.org/)
 * [Disk Inventory X](https://gitlab.com/tderlien/disk-inventory-x)
+* [Hidden Bar](https://github.com/dwarvesf/hidden)
+* [Caffeine](https://caffeine.en.softonic.com/mac)
 
 
 
@@ -145,19 +142,23 @@ Useful apps to download
 ### Sublime
 
 ```
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 ```
 
 ### Google Account
 Add account to mail.app
 System Preferences -> Internet Accounts -> enable all services
 
-Setup script to ensure trash is moved to 'all mail'
+
+
+### Data Volume
+Assuming /Volumes/data is mounted for data.
 
 ```
-$ cd /Library/LaunchAgents
-$ ln -s ~/scripts/applescript/move-trash-to-all-mail.plist
+$ ./_setupdatavolume.sh
 ```
+
+
 
 ## Credits
 

@@ -1,5 +1,3 @@
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export ANT_HOME=~/tools/apache-ant-current
 export M2_HOME=~/tools/apache-maven-current
 export MAVEN_OPTS=-Xmx2048m
