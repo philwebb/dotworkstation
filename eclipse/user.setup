@@ -13,7 +13,7 @@
     <requirement
         name="AnyEditTools.feature.group"/>
     <repository
-        url="http://andrei.gmxhome.de/eclipse/"/>
+        url="https://raw.githubusercontent.com/iloveeclipse/plugins/latest/"/>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
