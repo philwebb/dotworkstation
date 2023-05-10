@@ -1,1 +1,1 @@
-git --no-pager log --pretty=format: --name-only --since="2022-01-01" | sort | uniq | grep java | xargs perl -pi -e "s/Copyright\ (\d{4})(-\d{4})?\ the\ original\ author\ or\ authors/Copyright \1-2022 the original author or authors/"
+git --no-pager log --pretty=format: --name-only --since="2023-01-01" | sort | uniq | grep java | xargs perl -pi -e "s/Copyright\ (\d{4})(-\d{4})?\ the\ original\ author\ or\ authors/Copyright \1-2023 the original author or authors/"
