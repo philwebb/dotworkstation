@@ -13,10 +13,12 @@ curl -L "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en
 open ./firefox.dmg
 ```
 
+or https://www.mozilla.org/en-US/firefox/new/
+
 
 
 ### 1Password
-Install DropBox first from https://dropbox.com/downloading then download 1Password from https://1password.com/downloads/mac (don't use use the app store version)
+Install 1Password from https://1password.com
 
 
 
@@ -31,14 +33,14 @@ Install from the App Store.
 https://brew.sh/
 
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor
 ```
 
 Install:
 
 ```
-brew install coreutils curl tree watch wget tmux grep git jq
+brew install coreutils curl tree watch wget tmux grep git jq python httpie
 brew install imagemagick dive ruby asciidoctor
 ```
 
@@ -46,12 +48,10 @@ brew install imagemagick dive ruby asciidoctor
 
 ### zsh / oh-my-zsh
 
-https://github.com/robbyrussell/oh-my-zsh
+https://ohmyz.sh/#install
 
 ```
-brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-chsh -s /bin/zsh
 ```
 
 
@@ -76,11 +76,15 @@ cd ~/.workstation
 
 ### Key Remapping
 Remap caps-lock to command-alt-control-shift
-* [Karabiner](https://pqrs.org/osx/karabiner/)
+* [Karabiner Elements](https://karabiner-elements.pqrs.org/)
 * [Better Touch Tool](http://www.folivora.ai/)
 
 Install Karabiner and under "complex modifications" add `caps_lock to command+control+option+shift`. 
+
 Import `better-touch-tool-default.json` into better touch tool to handle the keys (cmd + shift + `.` to show hidden folders).
+
+or use https://rectangleapp.com/ and import RectangleCOnfig.json
+
 
 
 
@@ -100,7 +104,7 @@ Install add-ons
 Install SDKMan from https://sdkman.io/
 
 ```
-for v in $(sdk list java | grep -e 'hs-adpt' | grep -v -e '\$' | cut -d "|" -f 6); do sdk install java $v; done
+for v in $(sdk list java | grep -e '-librca' | grep -v 'fx-' | grep -v -e '\$' | cut -d "|" -f 6); do sdk install java $v; done
 ```
 
 
@@ -109,8 +113,9 @@ Useful apps from the app store:
 
 * Keynote
 * Slack
-* Tweetdeck
 * Lastpass
+* Microsoft Remote Desktop
+
 
 
 ### Misc
@@ -119,22 +124,28 @@ Useful apps to download
 
 * [Chrome](https://www.google.com/intl/en/chrome/browser/)
 * [Thunderbird](http://www.mozilla.org/en-US/thunderbird/)
-* [GitX](http://rowanj.github.io/gitx/)
+* [GitX](https://github.com/gitx/gitx)
 * [Skype](http://www.skype.com/en/)
 * [Visual Studio Code](https://code.visualstudio.com/)
-* [Google Drive](https://www.google.com/drive/)
-* [Docker](https://docs.docker.com/docker-for-mac/install)
-* [Atom](https://atom.io/)
-* [VirtualBox](https://www.virtualbox.org/)
+* [Google Drive](https://www.google.com/drive/download/)
+* [Docker](https://www.docker.com/products/docker-desktop/)
 * [Zoom](https://zoom.us/download)
+* [MS Teams](https://www.microsoft.com/en-us/microsoft-teams/log-in)
 * [VLC](https://www.videolan.org/vlc/)
 * [IINA](https://iina.io/)
 * [Sublime Text](https://www.sublimetext.com/)
 * [Wireshark](https://www.wireshark.org/)
-* [Disk Inventory X](https://gitlab.com/tderlien/disk-inventory-x)
 * [Hidden Bar](https://github.com/dwarvesf/hidden)
 * [Caffeine](https://caffeine.en.softonic.com/mac)
+* [Postman](https://www.postman.com/downloads/)
+* [Skype](https://www.skype.com/en/get-skype/)
+* [TinkerTool](http://www.bresink.com/osx/0TinkerTool/download.php)
+* [Lunar](https://lunar.fyi/)
+* [Raycast](https://www.raycast.com/)
 
+```
+$ brew install grandperspective
+```
 
 
 ## Extra Configuration
