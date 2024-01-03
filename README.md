@@ -77,7 +77,7 @@ cd ~/.workstation
 ### Key Remapping
 Remap caps-lock to command-alt-control-shift
 * [Karabiner Elements](https://karabiner-elements.pqrs.org/)
-* [Better Touch Tool](http://www.folivora.ai/)
+* [Better Touch Tool](http://www.folivora.ai/) or [Rectangle](https://rectangleapp.com/)
 
 Install Karabiner and under "complex modifications" add `caps_lock to command+control+option+shift`. 
 
