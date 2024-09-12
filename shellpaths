@@ -1,11 +1,13 @@
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/scripts
 export PATH=/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 export PATH=$PATH:/usr/local/sbin
 export PATH=~/tools/apache-ant-current/bin:$PATH
 export PATH=~/tools/apache-maven-current/bin:$PATH
 export PATH=~/tools/gradle-7.0/bin:$PATH
 export PATH=~/tools/fly:$PATH
+export PATH=$PATH:/Users/pwebb/tools/google-cloud-sdk/bin
 export PATH=$PATH:/opt/local/bin
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=/usr/local/opt/ruby/bin:$PATH
