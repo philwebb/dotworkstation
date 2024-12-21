@@ -4,7 +4,7 @@ export ZSH_THEME="gozilla"
 export CASE_SENSITIVE="true"
 export DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(compleat cp docker dirpersist gcloud gem gitfast gradle history httpie kubectl mvn macos rsync ruby rvm screen sublime tmux)
+plugins=(compleat cp docker direnv dirpersist gcloud gem gitfast gradle history httpie kubectl mvn macos rsync ruby rust rvm screen sublime tmux)
 source $ZSH/oh-my-zsh.sh
 
 # zsh specifics

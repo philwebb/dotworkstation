@@ -12,3 +12,4 @@ export PATH=$PATH:/opt/local/bin
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=/usr/local/opt/ruby/bin:$PATH
 export PATH=$PATH:/usr/local/lib/ruby/gems/2.6.0/bin
+export PATH=~/.cargo/bin:$PATH
