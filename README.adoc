@@ -1,0 +1,108 @@
+= Phil's MacBook Setup
+
+Setup files to get a MacBook the way I like it.
+
+WARNING: Don't use this unless you want to change your system to be like mine!
+
+
+
+== Update Existing Install
+
+[,shell]
+----
+nixswitch.sh
+----
+
+or
+
+[,shell]
+----
+nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix"
+----
+
+
+
+== Fresh Machine
+
+
+
+=== Install Homebrew
+
+Install Homebrew from https://brew.sh/[brew.sh]:
+
+[,shell]
+----
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+----
+
+=== Install Nix
+
+Use https://github.com/DeterminateSystems/nix-installer to install Nix:
+
+[,shell]
+----
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+----
+
+Check the install worked:
+
+[,shell]
+----
+nix-build --version
+----
+
+
+
+=== Checkout the Repository
+
+[,shell]
+----
+cd ~
+nix shell nixpkgs#git --command git clone https://github.com/philwebb/dotworkstation.git .workstation
+----
+
+
+
+=== Setup and Write the Host Name
+
+Set the hostname to something sensible if it isn't already:
+
+[,shell]
+----
+sudo scutil --set HostName <name>
+----
+
+Write the `hostname.nix` file so that it can be imported:
+
+[,shell]
+----
+echo "\"$( hostname )\"" > ~/.workstation/nix/hostname.nix
+----
+
+
+=== Write the User Name
+
+Write the `username.nix` file so that it can be imported:
+
+[,shell]
+----
+echo "\"$( whoami )\"" > ~/.workstation/nix/username.nix
+----
+
+
+
+=== Run the Nix Flake
+
+[,shell]
+----
+nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix"
+----
+
+
+=== Manually Add Firefox Extensions
+
+- https://addons.mozilla.org/en-US/firefox/addon/jsonview/[JSONView]
+- https://addons.mozilla.org/en-US/firefox/addon/noscript/[NoScript]
+- https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/[Tampermonkey]
+- https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/[uBlock Origin]
+- https://addons.mozilla.org/en-US/firefox/addon/youtube-downloader-lite[YouTube Downloader Lite]

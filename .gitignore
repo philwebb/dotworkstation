@@ -1,0 +1,4 @@
+.DS_Store
+nix/hostname.nix
+nix/username.nix
+home/.ssh
