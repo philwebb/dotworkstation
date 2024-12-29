@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:User
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/jdt/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/JDT.ecore"
+    name="Phillip Webb"
+    unsignedPolicy="ACCEPT"
+    questionnaireDate="2019-12-06T09:16:34.350-0800">
+  <setupTask
+      xsi:type="setup.p2:P2Task">
+    <requirement
+        name="AnyEditTools.feature.group"/>
+    <requirement
+        name="net.resheim.eclipse.launcher.feature.group"/>
+    <repository
+        url="https://raw.githubusercontent.com/iloveeclipse/plugins/latest/"/>
+    <repository
+        url="https://resheim.net/p2/eclipse-launcher/"/>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="User Preferences">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/UserPreferences">
+      <detail
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates">
+        <value>record</value>
+      </detail>
+    </annotation>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.debug.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/Console.limitConsoleOutput"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.switch_perspective_on_suspend"
+          value="always"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.UseContextualLaunch"
+          value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.e4.ui.css.swt.theme">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.e4.ui.css.swt.theme/themeid"
+          value="cupertino"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.e4.ui.workbench.renderers.swt">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.e4.ui.workbench.renderers.swt/enableMRU"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.jdt.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.nonExternalizedStringLiteral"
+          value="ignore"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.jdt.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/content_assist_autoactivation_delay"
+          value="40"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/content_assist_disabled_computers"
+          value="org.eclipse.jdt.ui.javaNoTypeProposalCategory$${0x0}org.eclipse.jdt.ui.javaTypeProposalCategory$${0x0}org.eclipse.jdt.ui.textProposalCategory$${0x0}org.eclipse.recommenders.calls.rcp.proposalCategory.templates$${0x0}${0x0}org.eclipse.jdt.ui.javaNoTypeProposalCategory${0x0}org.eclipse.jdt.ui.javaTypeProposalCategory${0x0}"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/escape¥Strings"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates"
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates/>"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates"
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;false&quot; context=&quot;java-members&quot; deleted=&quot;true&quot; description=&quot;test method (JUnit 3)&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.test&quot; name=&quot;test3&quot;>public void test$${name}() throws Exception {&#xA;&#x9;$${cursor}&#xA;}&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;java-members&quot; deleted=&quot;true&quot; description=&quot;test method (JUnit 4)&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.test_junit4&quot; name=&quot;test4&quot;>@$${testType:newType(org.junit.Test)}&#xA;public void $${testName}() throws Exception {&#xA;&#x9;$${staticImport:importStatic('org.junit.Assert.*')}$${cursor}&#xA;}&lt;/template>&lt;template autoinsert=&quot;false&quot; context=&quot;java-members&quot; deleted=&quot;false&quot; description=&quot;test method (JUnit 5)&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.templates.test_junit5&quot; name=&quot;test&quot;>@$${testType:newType(org.junit.jupiter.api.Test)}&#xA;void $${testName}() {&#xA;&#x9;$${staticImport:importStatic('org.junit.jupiter.api.Assertions.*')}$${cursor}&#xA;}&lt;/template>&lt;/templates>"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/smart_backspace"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/smart_opening_brace"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/smart_semicolon"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/smart_tab"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/smartPaste"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.lsp4e">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.lsp4e//org.eclipse.languageserver.languages.springboot/org.eclipse.jdt.core.javaSource"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.lsp4e//org.eclipse.languageserver.languages.springboot/org.springframework.boot.ide.properties.application.properties"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.lsp4e//org.eclipse.languageserver.languages.springboot/org.springframework.boot.ide.properties.application.yml"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.lsp4e//org.eclipse.languageserver.languages.springboot/org.springframework.boot.ide.xmlconfig"
+          value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.m2e.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.defaultPomEditorPage"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.hideFoldersOfNestedProjects"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.updateIndexes"
+          value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.team.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.team.ui/org.eclipse.team.ui.first_time"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.team.ui/org.eclipse.team.ui.sychronizing_default_perspective_to_show"
+          value="always"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui/ENABLE_ANIMATIONS"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui/SHOW_TEXT_ON_PERSPECTIVE_BAR"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui/showIntro"
+          value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.ui.editors">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/lineNumberRuler"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/printMargin"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/printMarginColumn"
+          value="120"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/showWhitespaceCharacters"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/whitespaceCharacterAlphaValue"
+          value="20"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.ui.ide">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.ide/unassociatedEditorStrategy"
+          value="org.eclipse.ui.ide.textEditor"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.ui.workbench">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands"
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;org.eclipse.ui.commands>&#xA;&lt;keyBinding contextId=&quot;org.eclipse.ui.textEditorScope&quot; keyConfigurationId=&quot;org.eclipse.ui.defaultAcceleratorConfiguration&quot; keySequence=&quot;SHIFT+END&quot;/>&#xA;&lt;keyBinding contextId=&quot;org.eclipse.ui.textEditorScope&quot; keyConfigurationId=&quot;org.eclipse.ui.defaultAcceleratorConfiguration&quot; keySequence=&quot;SHIFT+HOME&quot;/>&#xA;&lt;keyBinding commandId=&quot;org.eclipse.ui.edit.text.goto.lineStart&quot; contextId=&quot;org.eclipse.ui.textEditorScope&quot; keyConfigurationId=&quot;org.eclipse.ui.defaultAcceleratorConfiguration&quot; keySequence=&quot;HOME&quot;/>&#xA;&lt;keyBinding commandId=&quot;org.eclipse.ui.edit.text.goto.lineEnd&quot; contextId=&quot;org.eclipse.ui.textEditorScope&quot; keyConfigurationId=&quot;org.eclipse.ui.defaultAcceleratorConfiguration&quot; keySequence=&quot;END&quot;/>&#xA;&lt;keyBinding contextId=&quot;org.eclipse.ui.textEditorScope&quot; keyConfigurationId=&quot;org.eclipse.ui.defaultAcceleratorConfiguration&quot; keySequence=&quot;END&quot;/>&#xA;&lt;keyBinding contextId=&quot;org.eclipse.ui.textEditorScope&quot; keyConfigurationId=&quot;org.eclipse.ui.defaultAcceleratorConfiguration&quot; keySequence=&quot;END&quot;/>&#xA;&lt;keyBinding contextId=&quot;org.eclipse.ui.textEditorScope&quot; keyConfigurationId=&quot;org.eclipse.ui.defaultAcceleratorConfiguration&quot; keySequence=&quot;HOME&quot;/>&#xA;&lt;keyBinding contextId=&quot;org.eclipse.ui.textEditorScope&quot; keyConfigurationId=&quot;org.eclipse.ui.defaultAcceleratorConfiguration&quot; keySequence=&quot;HOME&quot;/>&#xA;&lt;/org.eclipse.ui.commands>"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/resourcetypes"
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editors version=&quot;3.1&quot;>&#xA;&lt;info extension=&quot;sh&quot; name=&quot;*&quot;>&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot;/>&#xA;&lt;defaultEditor id=&quot;org.eclipse.ui.DefaultTextEditor&quot;/>&#xA;&lt;/info>&#xA;&lt;/editors>"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/RUN_IN_BACKGROUND"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.wst.jsdt.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.wst.jsdt.ui/fontPropagated"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.wst.jsdt.ui/org.eclipse.jface.textfont"
+          value="1|Monaco|11.0|0|COCOA|1|;"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.springframework.ide.eclipse.beans.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.beans.core/org.springframework.ide.eclipse.beans.core.BeansCorePlugin.DISABLE_AUTO_DETECTION"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.springframework.ide.eclipse.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.builders.enable.beanmetadatabuilder"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.useChangeDetectionForJavaFiles"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.enable.org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.enable.org.springframework.ide.eclipse.boot.bootvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanAlias-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanClass-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanConstructorArgument-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanDefinition-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanDefinitionHolder-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanFactory-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanInitDestroyMethod-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanProperty-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanReference-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.methodOverride-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.parsingProblems-org.springframework.ide.eclipse.beans.core.beansvalidator"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.springframework.ide.eclipse.core/org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.boot.missingConfigurationProcessor-org.springframework.ide.eclipse.boot.bootvalidator"
+          value="false"/>
+    </setupTask>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      type="JRE"
+      name="jre.location-1.8"
+      value="/Users/pwebb/sdkman/candidates/java/java8"
+      label="JRE 1.8 Location">
+    <description>The location of a JDK or JRE compatible with Java 1.8.</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      type="JRE"
+      name="jre.location-11"
+      value="/Users/pwebb/sdkman/candidates/java/java11"
+      label="JRE 11 Location">
+    <description>The location of a JDK or JRE compatible with Java 11.</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      type="JRE"
+      name="jre.location-17"
+      value="/Users/pwebb/sdkman/candidates/java/java17"
+      label="JRE 17 Location">
+    <description>The location of a JDK or JRE compatible with Java 17.</description>
+  </setupTask>
+  <setupTask
+      xsi:type="jdt:JRETask"
+      version="JavaSE-1.8"
+      location="${jre.location-1.8}"/>
+  <setupTask
+      xsi:type="jdt:JRETask"
+      version="JavaSE-11"
+      location="${jre.location-11}"/>
+  <setupTask
+      xsi:type="jdt:JRETask"
+      version="JavaSE-17"
+      location="${jre.location-17}"/>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="Eclipse Projects">
+    <restriction
+        xsi:type="setup:ProjectCatalog"
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="EGit">
+      <restriction
+          xsi:type="setup:Project"
+          href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='egit']"/>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="Workspace setup for branch master">
+        <restriction
+            xsi:type="setup:Stream"
+            href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='egit']/@streams[name='master']"/>
+        <setupTask
+            xsi:type="setup:VariableTask"
+            name="git.clone.jgit.remoteURI"
+            value="https://git.eclipse.org/r/jgit/jgit"
+            label="JGit Gerrit Repository">
+          <description>Choose from the available Gerrit or Git URIs</description>
+        </setupTask>
+        <setupTask
+            xsi:type="setup:VariableTask"
+            name="git.clone.egit.remoteURI"
+            value="https://git.eclipse.org/r/egit/egit"
+            label="EGit Gerrit Repository">
+          <description>Choose from the available Gerrit or Git URIs</description>
+        </setupTask>
+      </setupTask>
+    </setupTask>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      type="FOLDER"
+      name="install.root"
+      value="/Users/pwebb"
+      defaultValue="/Users/pwebb"
+      label="Root install folder">
+    <description>The root install folder where all the products are installed</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      type="FOLDER"
+      name="workspace.container.root"
+      value="/Users/pwebb"
+      defaultValue="/Users/pwebb"
+      label="Root workspace-container folder">
+    <description>The root workspace-container folder where all the workspaces are located</description>
+  </setupTask>
+  <attributeRule
+      attributeURI="http://www.eclipse.org/oomph/setup/git/1.0#//GitCloneTask/location"
+      value="${installation.location/git/}${@id.locationQualifier|trim}${@id.remoteURI|gitRepository}"/>
+  <attributeRule
+      attributeURI="http://www.eclipse.org/oomph/setup/1.0#//InstallationTask/location"
+      value="${install.root/}${installation.id}"/>
+  <attributeRule
+      attributeURI="http://www.eclipse.org/oomph/setup/1.0#//WorkspaceTask/location"
+      value="${@id.location}"/>
+  <acceptedLicense>803f5c18b01a4b8cb6fe7b1d4c87465c SPRING IDE PROJECT SOFTWARE USER AGREEMENT</acceptedLicense>
+  <acceptedLicense>6a3d083ad2bd7d3a80ee293235f8c5b1 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>be4a7d94b4e1903e628a3001859739a8 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>d56c24ccdeee3403be5ba6423524696c Eclipse Public License - v 1.0</acceptedLicense>
+  <acceptedLicense>30d252f582a9f4ebadd81c36d1b23c52 Eclipse Public License - v 1.0</acceptedLicense>
+  <acceptedLicense>684624056b6f648dba8931d04dc34ac1 The content of this package is provided under the EPL v1.0 license (see below).</acceptedLicense>
+  <acceptedLicense>DEFAULT_LICENSE Marker to remember license pre-prompting</acceptedLicense>
+  <acceptedLicense>8d3137b6d090b6860d1b977a88ceb334 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>d77cfd8b73fc71776727fcbb2605709 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>abc76a6cc9d06e4684ff61ed74a972c Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>318bcab4617b336391ac7ab40514ccc3 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>aa1a84ed6378c1cdba13a100c225aa57 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>425529a69afe7129289ce9a30b4d2b6c Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>84f0b7f0a433c033764dd28540d6d199 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>4450aa10f21d146d6a6a80f84275f5b2 Eclipse Foundation Software User Agreement</acceptedLicense>
+  <acceptedLicense>d6f37e81a1e1ed76d1a57feba306f9e0 Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.</acceptedLicense>
+  <acceptedLicense>5fba1f5664f0514b5bfbcb871b8ce99a Apache License - v2.0</acceptedLicense>
+  <acceptedLicense>427a7c5fe6a153e11446daf8ee586437 User Agreement</acceptedLicense>
+</setup:User>
