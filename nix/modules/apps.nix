@@ -42,7 +42,6 @@
       "firefox"
       "iina"
       "karabiner-elements"
-      "purevpn"
       "raycast"
       "rectangle"
       "skype"
