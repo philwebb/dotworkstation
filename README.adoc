@@ -99,6 +99,14 @@ nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix"
 ----
 
 
+=== Inject Secrets
+
+[,shell]
+----
+opinject.sh
+----
+
+
 === Manually Add Firefox Extensions
 
 - https://addons.mozilla.org/en-US/firefox/addon/jsonview/[JSONView]
