@@ -11,6 +11,7 @@
     httpie
     imagemagick
     jq
+    moreutils
     stow
     tmux
     tree
