@@ -32,7 +32,15 @@
       inherit system specialArgs;
       modules = [
         ./modules/nix.nix
-        ./modules/system.nix
+        ./modules/system-full.nix
+        ./modules/apps.nix
+      ];
+    };
+    darwinConfigurations.apps = nix-darwin.lib.darwinSystem {
+      inherit system specialArgs;
+      modules = [
+        ./modules/nix.nix
+        ./modules/system-none.nix
         ./modules/apps.nix
       ];
     };

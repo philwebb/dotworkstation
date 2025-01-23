@@ -20,6 +20,20 @@ or
 nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix"
 ----
 
+or if you just want the apps:
+
+[,shell]
+----
+nixswitchapps.sh
+----
+
+or
+
+[,shell]
+----
+nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix#apps"
+----
+
 
 
 == Fresh Machine
