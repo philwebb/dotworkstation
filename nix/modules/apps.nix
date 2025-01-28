@@ -12,6 +12,7 @@
     imagemagick
     jq
     moreutils
+    nodejs_23
     stow
     tmux
     tree
