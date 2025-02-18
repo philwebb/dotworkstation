@@ -77,7 +77,7 @@
         persistent-apps = [
           "/System/Applications/Utilities/Terminal.app"
           "/Applications/Firefox.app"
-          "/Users/${username}/tools/eclipse/eclipse-java-2024-03-R-macosx-cocoa-aarch64/Eclipse.app"
+          "/Users/${username}/tools/eclipse/eclipse-java-2024-12-R-macosx-cocoa-aarch64/Eclipse.app"
           "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
           "/Users/${username}/Applications/Chat.app"
@@ -303,6 +303,12 @@
 
       # Install Color Sync Profiles
       sudo cp ~/.workstation/colorsyncprofiles/* /Library/ColorSync/Profiles
+
+      # Install Eclipse User Setup
+      if [ -f "/Users/${username}/.eclipse/org.eclipse.oomph.setup/setups/user.setup" ]; then
+        rm "/Users/${username}/.eclipse/org.eclipse.oomph.setup/setups/user.setup"
+      fi
+      ln -s "/Users/${username}/.workstation/eclipse/user.setup" /Users/${username}/.eclipse/org.eclipse.oomph.setup/setups/user.setup
 
       # Install subl command line
       mkdir -p ~/bin
