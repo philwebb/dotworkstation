@@ -417,6 +417,14 @@
       label="JRE 23 Location">
     <description>The location of a JDK or JRE compatible with Java 23.</description>
   </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      type="JRE"
+      name="jre.location-24"
+      value="/Users/pwebb/sdkman/candidates/java/java23"
+      label="JRE 24 Location">
+    <description>The location of a JDK or JRE compatible with Java 24.</description>
+  </setupTask>
   <attributeRule
       attributeURI="http://www.eclipse.org/oomph/setup/git/1.0#//GitCloneTask/location"
       value="${installation.location/git/}${@id.locationQualifier|trim}${@id.remoteURI|gitRepository}"/>
