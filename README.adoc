@@ -10,13 +10,6 @@ WARNING: Don't use this unless you want to change your system to be like mine!
 
 [,shell]
 ----
-nixswitch.sh
-----
-
-or
-
-[,shell]
-----
 nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix"
 ----
 
@@ -24,16 +17,15 @@ or if you just want the apps:
 
 [,shell]
 ----
-nixswitchapps.sh
+sudo darwin-rebuild switch --flake "path:$HOME/.workstation/nix#apps"
 ----
 
-or
+For additional apps:
 
 [,shell]
 ----
-nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix#apps"
+sudo darwin-rebuild switch --flake "path:$HOME/.workstation/nix#moreapps"
 ----
-
 
 
 == Fresh Machine
