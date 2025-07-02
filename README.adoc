@@ -120,6 +120,6 @@ opinject.sh
 
 - https://addons.mozilla.org/en-US/firefox/addon/jsonview/[JSONView]
 - https://addons.mozilla.org/en-US/firefox/addon/noscript/[NoScript]
-- https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/[Tampermonkey]
+- https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/[Violentmonkey]
 - https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/[uBlock Origin]
 - https://addons.mozilla.org/en-US/firefox/addon/youtube-downloader-lite[YouTube Downloader Lite]
