@@ -4,7 +4,7 @@
   ...
 }: {
   system = {
-    stateVersion = 5;
+    stateVersion = 6;
     defaults = {
       NSGlobalDomain = {
         "com.apple.keyboard.fnState" = true;
