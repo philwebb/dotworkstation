@@ -4,7 +4,7 @@
     onActivation = {
       autoUpdate = false;
     };
-    taps = ["homebrew/services"];
+    taps = [];
     brews = [];
     casks = [
       "1password"
