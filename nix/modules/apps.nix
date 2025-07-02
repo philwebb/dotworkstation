@@ -35,6 +35,7 @@
       "caffeine"
       "dehesselle-meld"
       "docker"
+      "gh"
       "ghostty"
       "gitx"
       "google-chrome"
