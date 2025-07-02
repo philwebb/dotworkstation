@@ -8,6 +8,7 @@
     git
     gh
     gnugrep
+    graphviz
     httpie
     imagemagick
     jq
@@ -35,7 +36,6 @@
       "caffeine"
       "dehesselle-meld"
       "docker"
-      "gh"
       "ghostty"
       "gitx"
       "google-chrome"
