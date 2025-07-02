@@ -31,7 +31,6 @@
     casks = [
       "1password"
       "1password-cli"
-      "adobe-creative-cloud"
       "bartender"
       "caffeine"
       "dehesselle-meld"
@@ -46,7 +45,6 @@
       "karabiner-elements"
       "raycast"
       "rectangle"
-      "skype"
       "sublime-text"
       "visual-studio-code"
       "vlc"
@@ -55,13 +53,7 @@
       "zoom"
     ];
     masApps = {
-      "brother-iprint-scan" = 1193539993;
-      "final-cut-pro" = 424389933;
       "keynote" = 409183694;
-      "pairvpn" = 1347012179;
-      "slack" = 803453959;
-      "microsoft-windows-app" = 1295203466;
-      "wireguard" = 1451685025;
       "xcode" = 497799835;
     };
   };

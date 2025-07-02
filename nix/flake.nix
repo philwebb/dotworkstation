@@ -44,6 +44,15 @@
         ./modules/apps.nix
       ];
     };
+    darwinConfigurations.moreapps = nix-darwin.lib.darwinSystem {
+      inherit system specialArgs;
+      modules = [
+        ./modules/nix.nix
+        ./modules/system-none.nix
+        ./modules/apps.nix
+        ./modules/moreapps.nix
+      ];
+    };
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };
 }
