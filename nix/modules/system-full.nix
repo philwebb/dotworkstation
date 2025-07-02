@@ -239,9 +239,6 @@
         "com.apple.TimeMachine" = {
           DoNotOfferNewDisksForBackup = true;
         };
-        "com.apple.addressbook" = {
-          ABShowDebugMenu = true;
-        };
         "com.apple.TextEdit" = {
           RichText = 0;
           PlainTextEncoding = 4;
