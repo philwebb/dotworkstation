@@ -18,7 +18,7 @@
         "com.apple.trackpad.forceClick" = true;
         "com.apple.trackpad.scaling" = 1.0;
         "com.apple.trackpad.trackpadCornerClickBehavior" = null;
-        _HIHideMenuBar = true;
+        _HIHideMenuBar = false;
         AppleEnableMouseSwipeNavigateWithScrolls = true;
         AppleEnableSwipeNavigateWithScrolls = true;
         AppleFontSmoothing = null;
