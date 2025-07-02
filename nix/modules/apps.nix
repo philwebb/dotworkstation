@@ -28,7 +28,6 @@
       "vlc"
       "wireshark"
       "zed"
-      "zoom"
     ];
     masApps = {
       "keynote" = 409183694;

@@ -6,7 +6,9 @@
     };
     taps = ["homebrew/services"];
     brews = [];
-    casks = [];
+    casks = [
+      "zoom"
+    ];
     masApps = {
       "brother-iprint-scan" = 1193539993;
       "final-cut-pro" = 424389933;
