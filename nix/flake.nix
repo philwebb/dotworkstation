@@ -33,6 +33,7 @@
       modules = [
         ./modules/nix.nix
         ./modules/system-full.nix
+        ./modules/packages.nix
         ./modules/apps.nix
       ];
     };
@@ -41,6 +42,7 @@
       modules = [
         ./modules/nix.nix
         ./modules/system-none.nix
+        ./modules/packages.nix
         ./modules/apps.nix
       ];
     };
@@ -49,8 +51,17 @@
       modules = [
         ./modules/nix.nix
         ./modules/system-none.nix
+        ./modules/packages.nix
         ./modules/apps.nix
         ./modules/moreapps.nix
+      ];
+    };
+    darwinConfigurations.noapps = nix-darwin.lib.darwinSystem {
+      inherit system specialArgs;
+      modules = [
+        ./modules/nix.nix
+        ./modules/system-full.nix
+        ./modules/packages.nix
       ];
     };
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
