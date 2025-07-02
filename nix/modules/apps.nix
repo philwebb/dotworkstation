@@ -5,7 +5,9 @@
       autoUpdate = false;
     };
     taps = [];
-    brews = [];
+    brews = [
+      "noti"
+    ];
     casks = [
       "1password"
       "1password-cli"
