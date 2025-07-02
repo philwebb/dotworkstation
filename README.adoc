@@ -10,7 +10,7 @@ WARNING: Don't use this unless you want to change your system to be like mine!
 
 [,shell]
 ----
-nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix"
+sudo darwin-rebuild switch --flake "path:$HOME/.workstation/nix"
 ----
 
 or if you just want the apps:
@@ -49,6 +49,8 @@ Use https://github.com/DeterminateSystems/nix-installer to install Nix:
 ----
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ----
+
+Make sure you say "NO" to "Install Determinate Nix"
 
 Check the install worked:
 
@@ -101,7 +103,7 @@ echo "\"$( whoami )\"" > ~/.workstation/nix/username.nix
 
 [,shell]
 ----
-nix run nix-darwin -- switch --flake "path:$HOME/.workstation/nix"
+sudo --preserve-env=HOME run nix-darwin/master#darwin-rebuild -- switch --flake "path:$HOME/.workstation/nix"
 ----
 
 
