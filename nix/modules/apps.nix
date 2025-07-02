@@ -29,6 +29,7 @@
       "visual-studio-code"
       "vlc"
       "wireshark"
+      "xbar"
       "zed"
     ];
     masApps = {
