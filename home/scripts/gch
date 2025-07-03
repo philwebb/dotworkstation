@@ -1,0 +1,114 @@
+#!/bin/bash
+
+set -o errexit -o pipefail -o noclobber
+
+positional_args=()
+git_host='https://github.com'
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --gitlab)
+      git_host="https://gitlab.com"
+      shift
+      ;;
+    --include-my-fork)
+      include_my_fork=true
+      shift
+      ;;
+    --eclipse)
+      eclipse=true
+      shift
+      ;;
+    --wiki)
+      wiki=true
+      shift
+      ;;
+    --worktree)
+      worktree=true
+      shift
+      ;;
+    -*|--*)
+      echo "Unknown option $1"
+      exit 1
+      ;;
+    *)
+      positional_args+=("$1") 
+      shift
+      ;;
+  esac
+done
+
+set -- "${positional_args[@]}"
+
+repository_reference="${positional_args[0]}"
+if [[ -z "$repository_reference" ]]; then
+  echo "No repository reference"
+  exit 1
+fi
+
+git_organization="${repository_reference%%/*}"
+if [[ -z "$git_organization" ]] || [[ "$git_organization" == "$repository_reference" ]]; then
+  echo "No organization in reference"
+  exit 1
+fi
+
+git_repository="${repository_reference##*/}"
+if [[ -z "$git_repository" ]] || [[ "$git_repository" == "$repository_reference" ]]; then
+  echo "No repository reference"
+  exit 1
+fi
+
+if [ -d "$git_repository" ]; then
+  echo "Directory $git_repository already exists"
+  exit 1
+fi
+
+repository_url="${git_host}/${git_organization}/${git_repository}"
+checkout_directory=${git_repository}
+
+if [[ -n "$eclipse" ]] || [[ -n "$wiki" ]]; then
+  checkout_directory=${git_repository}/code
+fi
+
+if [[ -n "$worktree" ]]; then
+  checkout_directory=${checkout_directory}/main
+fi
+
+git clone -o "$git_organization" "$repository_url" "$checkout_directory"
+
+if [[ -n "$wiki" ]]; then
+  wiki_directory=${git_repository}/wiki
+  git clone -o "$git_organization" "$repository_url.wiki" "$wiki_directory"
+fi
+
+pushd "$checkout_directory"
+
+if [[ -n "$worktree" ]]; then
+  branches=$( git ls-remote --heads spring-projects | sed 's?.*refs/heads/??' )
+  for branch in "$branches"; do
+    while IFS= read -r branch; do 
+      if [[ ! -d "../$branch" ]]; then
+        git worktree add "../$branch" "$branch"
+      fi
+    done <<< "$branches"
+  done
+fi
+
+if [[ -n "$include_my_fork" ]]; then
+  fork_url="${git_host}/philwebb/${git_repository}"
+  git remote add philwebb "$fork_url"
+  git fetch philwebb
+fi
+
+if [[ -n "$eclipse" ]]; then
+	if [[ -n "$worktree" ]]; then
+      while IFS= read -r branch; do 
+	  mkdir -p "../../workspace/$branch"
+      done <<< "$branches"
+	else
+	  mkdir "../workspace"
+	fi
+fi
+
+popd
+
