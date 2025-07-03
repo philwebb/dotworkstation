@@ -5,6 +5,7 @@
     curl
     direnv
     dive
+    getopt
     git
     gh
     gnugrep
