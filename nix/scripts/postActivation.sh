@@ -14,7 +14,7 @@ fi
 echo "Applying system wide settings..."
 
 # Install Color Sync Profiles
-cp "${username}"/.workstation/colorsyncprofiles/* /Library/ColorSync/Profiles
+cp "/Users/${username}"/.workstation/colorsyncprofiles/* /Library/ColorSync/Profiles
 
 # Show various folders
 chflags nohidden /Volumes
