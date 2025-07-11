@@ -2,7 +2,8 @@
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = false;
+      autoUpdate = true;
+      upgrade = true;
     };
     taps = [];
     brews = [
