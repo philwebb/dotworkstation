@@ -421,7 +421,7 @@
       xsi:type="setup:VariableTask"
       type="JRE"
       name="jre.location-24"
-      value="/Users/pwebb/sdkman/candidates/java/java23"
+      value="/Users/pwebb/sdkman/candidates/java/java24"
       label="JRE 24 Location">
     <description>The location of a JDK or JRE compatible with Java 24.</description>
   </setupTask>
@@ -452,4 +452,5 @@
   <acceptedLicense>d6f37e81a1e1ed76d1a57feba306f9e0 Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.</acceptedLicense>
   <acceptedLicense>5fba1f5664f0514b5bfbcb871b8ce99a Apache License - v2.0</acceptedLicense>
   <acceptedLicense>427a7c5fe6a153e11446daf8ee586437 User Agreement</acceptedLicense>
+  <acceptedLicense>a023e214165271bfe587f2257c7dd90b Copyright (c) 2004 - 2025 Andrey Loskutov, licensed under the Eclipse Public License 2.0.</acceptedLicense>
 </setup:User>
