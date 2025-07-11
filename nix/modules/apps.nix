@@ -14,7 +14,6 @@
       "bartender"
       "caffeine"
       "dehesselle-meld"
-      "docker"
       "ghostty"
       "gitx"
       "google-chrome"
