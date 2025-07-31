@@ -1,5 +1,5 @@
 github:
   credentials:
-    username: philwebb
+    username: {{ op://cli/github/username }}
     password: {{ op://cli/github/forwardmerge }}
 dry_run: false
