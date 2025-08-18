@@ -15,6 +15,7 @@
     jq
     moreutils
     nodejs_24
+    postgresql
     stow
     tmux
     tree
