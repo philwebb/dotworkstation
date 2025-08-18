@@ -78,7 +78,7 @@
         persistent-apps = [
           "/System/Applications/Utilities/Terminal.app"
           "/Applications/Firefox.app"
-          "/Users/${username}/tools/eclipse/eclipse-java-2024-12-R-macosx-cocoa-aarch64/Eclipse.app"
+          "/Users/${username}/tools/eclipse/eclipse-java-2025-06-R-macosx-cocoa-aarch64/Eclipse.app"
           "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
         ];
