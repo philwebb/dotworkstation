@@ -19,7 +19,7 @@
     <repository
         url="https://raw.githubusercontent.com/iloveeclipse/plugins/latest/"/>
     <repository
-        url="https://resheim.net/p2/eclipse-launcher/"/>
+        url="https://apps.resheim.net/p2/eclipse-launcher_3.0.3/"/>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
