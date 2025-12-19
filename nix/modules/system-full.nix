@@ -198,9 +198,6 @@
         "com.apple.NetworkBrowser" = {
           BrowseAllInterfaces = true;
         };
-        "com.apple.universalaccess" = {
-          reduceTransparency = true;
-        };
         "com.apple.print.PrintingPrefs" = {
           "Quit When Finished" = true;
         };
